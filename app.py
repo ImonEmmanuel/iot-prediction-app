@@ -1,7 +1,19 @@
-import numpy as np
-import pandas as pd
 import streamlit as st 
+import pandas
+import sklearn
+import matplotlib
+from sklearn import preprocessing
+import pandas as pd
+from sklearn.ensemble import StackingClassifier
+from sklearn.svm import SVC
+from sklearn.neural_network import MLPClassifier
+from sklearn.linear_model import LogisticRegression
+from lightgbm import LGBMClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.ensemble import RandomForestClassifier
 import pickle
+
 
 
 model = pickle.load(open('new_model.pkl', 'rb'))
