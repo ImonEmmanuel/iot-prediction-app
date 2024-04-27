@@ -64,11 +64,20 @@ def main():
     if st.button("Predict"): 
         # Make prediction
         prediction = model.predict(input_data)
+
         print("prediction")
         
         # Display prediction
         st.subheader('Prediction')
-        st.write(prediction[0])
+        prediction_score = int(prediction[0])
+        if prediction_score == 0:
+             st.success("This is not an Attack")
+             st.write(f"Prediction Score is {prediction_score}")
+        else:
+            st.error('This is an Attack', icon="🚨")
+            st.write(f"Prediction Score is {prediction_score}")
+
+
 
 # Run the main function
 if __name__ == '__main__':
