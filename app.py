@@ -50,10 +50,10 @@ def get_user_input():
 
 # Main function
 def main():
-    st.title('IOT Prediction App')
+    st.title('ICS ATTACK APP')
     html_temp = """
     <div style="background:#025246 ;padding:10px">
-    <h2 style="color:white;text-align:center;">IOT Prediction App </h2>
+    <h2 style="color:white;text-align:center;">ICS ATTACK PREDICTION APP </h2>
     </div>
     """
     st.markdown(html_temp, unsafe_allow_html = True)
